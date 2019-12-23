@@ -4,9 +4,6 @@ type imageUrl = {
   url: string
 }
 
-export const Section: React.FC = () => {
-  return (
-    <div>
-    </div>
-  );
+export default class Section extends React.Component {
+  
 }
