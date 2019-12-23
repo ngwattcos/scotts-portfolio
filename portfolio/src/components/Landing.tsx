@@ -18,8 +18,7 @@ export default class Landing extends React.Component {
                 </span>
               )}
 
-              {/* <a className="link-white" href="/login">login</a>&nbsp;&nbsp;|&nbsp;&nbsp; */}
-              {/* <a className="link-white" href="/register">sign up</a> */}
+
             </div>
           </div>
           
