@@ -21,7 +21,8 @@ type imageUrl = {
 
 type Props = {
   children: ReactNode,
-  backgroundImage: string
+  backgroundImage: string,
+  height?: string
 }
 
 export default class Section extends Component<Props> {
