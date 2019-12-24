@@ -73,9 +73,10 @@ body {
 }
 
 .landing-cover {
-  background-color: $dark-cover;
+  // background-color: $dark-cover;
   width: 100%;
   height: 100vh;
+  z-index: 10;
 }
 
 .link-unformatted {
@@ -294,7 +295,7 @@ div.account-card > div.account-number {
 .landing-group {
 	height: 100vh;
 	width: 100%;
-	padding-top: 40vh;
+	padding-top: 55vh;
 	padding-bottom: 30vh;
 	/* z-index: 100; */
 }
@@ -341,8 +342,10 @@ div.account-card > div.account-number {
 	color: #000000;
 }
 
-.section-landing {
-	background-image: url("/images/city-skyline-light.jpg");
+
+.section {
+  // background-image: url("../images/background0.png");
+  // background-color: red;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
