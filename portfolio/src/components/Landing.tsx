@@ -1,11 +1,22 @@
 import React from 'react'
 import {links} from './NavBar'
+import * as CSS from 'csstype';
 
-export default class Landing extends React.Component {
+type LandingProps = {
+  paddingTop?: string,
+  paddingBottom?: string,
+}
+
+export default class Landing extends React.Component<LandingProps> {
   render() {
+    const cssProps: CSS.Properties = {
+      paddingTop: `${this.props.paddingTop}`,
+      paddingBottom: `${this.props.paddingBottom}`,
+    };
+
     return (
       <div className="landing-cover">
-        <div className="landing-group section-centered">
+        <div className="landing-group">
           <div className="centered-custom">
             <div className="landing-hugetitle">Scott Wang</div>
             <div className="landing-normal">Incoming Google SWE Intern '20</div>

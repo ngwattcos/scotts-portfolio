@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <div className="App">
       <NavBar></NavBar>
       <Section backgroundImage="./images/background0.png">
-        <Landing></Landing>
+        <Landing paddingTop="55vh" paddingBottom="30vh"></Landing>
       </Section>
 
       <div className="content-container">
