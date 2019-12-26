@@ -1,40 +1,36 @@
 import React, {ReactNode, Component } from 'react';
 import * as CSS from 'csstype';
 
-type imageUrl = {
-  url: string
-}
-
-// export default class Section extends React.Component {
-//   constructor(props: React.Component) {
-//     super(props);
-//   }
-
-//   render() {
-//     return (
-//       <div className="section-landing">
-
-//       </div>
-//     );
-//   }
-// }
-
 type Props = {
+  title: string,
+  id: string,
   children: ReactNode,
-  backgroundImage: string,
+  backgroundImage?: string,
+  backgroundColor?: string,
+  minHeight?: string,
+  padding?: string,
+  paddingSide?: string,
+  paddingTop?: string,
+  paddingBottom?: string,
 }
 
 export default class Section extends Component<Props> {
   render() {
-    const cssProps: CSS.Properties = {
-      backgroundImage: `url('${this.props.backgroundImage}')`
-      // backgroundColor: "blue"
+    const outerProps: CSS.Properties = {
+      backgroundImage: `url('${this.props.backgroundImage}')`,
+      backgroundColor: `${this.props.backgroundImage}`,
+      minHeight: `${this.props.minHeight}`,
     };
 
-    console.log(cssProps.backgroundImage);
+    const innerProps: CSS.Properties = {
+      padding: `${this.props.padding}`,
+    }
 
     return (
-      <div className="section" style={cssProps}>{this.props.children}</div>
+      <div className="section" style={outerProps} id={this.props.id}>
+        <div className="section-title">{this.props.title}</div>
+        <div style={innerProps}>{this.props.children}</div>
+      </div>
     );
   }
 }
