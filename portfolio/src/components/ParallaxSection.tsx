@@ -20,7 +20,7 @@ export default class ParallaxSection extends Component<Props> {
     console.log(cssProps.backgroundImage);
 
     return (
-      <div className="section" style={cssProps}>{this.props.children}</div>
+      <div className="section-parallax" style={cssProps}>{this.props.children}</div>
     );
   }
 }

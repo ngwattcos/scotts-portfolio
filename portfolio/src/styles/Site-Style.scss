@@ -32,6 +32,9 @@ $orange: #ffae00;
 
 $content-width: 70%;
 
+// $gradient1: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(219,219,219,1) 63%, rgba(138,235,255,1) 100%);
+$gradient1: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(219,219,219,1) 63%, rgba(138,235,255,1) 86%, rgba(240,240,240,1) 100%);
+
 $navbar-item-fontsize: 24px;
 
 * {
@@ -40,11 +43,14 @@ $navbar-item-fontsize: 24px;
 
 .cust-navbar {
   width: 100%;
-  top: 0;
+  // top: 0px;
   overflow: hidden;
   text-align: left;
   position: fixed;
   z-index: 100;
+  transition: top 0.2s;
+  transition-timing-function: linear;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 $cust-navbar-item-padding-side: 10px;
@@ -74,9 +80,13 @@ $cust-navbar-item-padding-side: 10px;
   background-color: $tertiary-dark;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
-	padding-top: 3.5rem;
+	// padding-top: 3.5rem;
 }
 
 .content-container {
@@ -302,7 +312,23 @@ div.account-card > div.account-number {
 
 $section-padding: 30px;
 
+.gradient1 {
+  background: $gradient1;
+}
+
+
 .section {
+  // background-image: url("../images/background0.png");
+  // background-color: red;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  margin-top: 0px;
+}
+
+.section-parallax {
   // background-image: url("../images/background0.png");
   // background-color: red;
 	background-attachment: fixed;

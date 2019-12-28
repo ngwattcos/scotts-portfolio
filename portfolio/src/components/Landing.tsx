@@ -1,5 +1,6 @@
 import React from 'react'
 import {links} from './NavBar'
+import * as CSS from 'csstype';
 
 import { Link, animateScroll as scroll } from 'react-scroll'
 // import * as CSS from 'csstype';
@@ -11,14 +12,14 @@ type LandingProps = {
 
 export default class Landing extends React.Component<LandingProps> {
   render() {
-    // const cssProps: CSS.Properties = {
-    //   paddingTop: `${this.props.paddingTop}`,
+    const cssProps: CSS.Properties = {
+      paddingTop: `${this.props.paddingTop}`,
     //   paddingBottom: `${this.props.paddingBottom}`,
-    // };
+    };
 
     return (
       <div className="landing-cover">
-        <div className="landing-group">
+        <div className="landing-group" style={cssProps}>
           <div className="centered-custom">
             <div className="landing-hugetitle">Scott Wang</div>
             <div className="landing-normal">Incoming Google SWE Intern '20</div>

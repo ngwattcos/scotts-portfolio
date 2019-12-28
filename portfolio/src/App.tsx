@@ -13,17 +13,21 @@ const App: React.FC = () => {
     <div className="App">
       <NavBar></NavBar>
       <ParallaxSection backgroundImage="./images/background0.png">
-        <Landing paddingTop="55vh" paddingBottom="30vh"></Landing>
+        <Landing paddingTop="60vh" paddingBottom="30vh"></Landing>
       </ParallaxSection>
 
-      <Section title="whoami" id="about" minHeight="30vh" padding="50px">
+      <Section title="whoami" id="about" minHeight="60vh" padding="50px">
         <CardContainer>
           <Card title="About">potato</Card>
           <Card title="About">potato</Card>
         </CardContainer>
       </Section>
 
-      <Section title="experience" id="experience" minHeight="30vh" padding="0px">
+      <Section title="skills" id="skills" minHeight="60vh">
+
+      </Section>
+
+      <Section title="experience" id="experience" backgroundGradient={1} minHeight="30vh" padding="0px">
 
       </Section>
 

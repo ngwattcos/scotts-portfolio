@@ -7,6 +7,7 @@ type Props = {
   children: ReactNode,
   backgroundImage?: string,
   backgroundColor?: string,
+  backgroundGradient?: number,
   minHeight?: string,
   padding?: string,
   paddingSide?: string,
@@ -17,7 +18,6 @@ type Props = {
 export default class Section extends Component<Props> {
   render() {
     const outerProps: CSS.Properties = {
-      backgroundImage: `url('${this.props.backgroundImage}')`,
       backgroundColor: `${this.props.backgroundImage}`,
       minHeight: `${this.props.minHeight}`,
     };
@@ -26,8 +26,19 @@ export default class Section extends Component<Props> {
       padding: `${this.props.padding}`,
     }
 
+    let gradientChoice = "";
+    switch (this.props.backgroundGradient) {
+      case 1:
+        gradientChoice = "gradient1";
+        break;
+      default:
+        gradientChoice = "gradient1";
+        break;
+    }
+    
+
     return (
-      <div className="section" style={outerProps} id={this.props.id}>
+      <div className={`section ${gradientChoice}`} style={outerProps} id={this.props.id}>
         <div className="section-title">{this.props.title}</div>
         <div style={innerProps}>{this.props.children}</div>
       </div>
