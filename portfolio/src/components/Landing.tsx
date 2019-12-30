@@ -28,11 +28,11 @@ export default class Landing extends React.Component<LandingProps> {
               {links.map(link => {
                 return link.anchor === "about" ? (<span>
                   {/* <a className="link-white link-unformatted" href={`#${link.anchor}`}>{link.anchor}</a> */}
-                  <Link className="link-white link-unformatted" to={`${link.anchor}`}>{link.anchor}</Link>
+                  <a className="link-white link-unformatted" href={`#${link.anchor}`}>{link.anchor}</a>
                 </span>) : (<span>
                   &nbsp;&nbsp;&nbsp;&#x7c;&nbsp;&nbsp;&nbsp;
                   {/* <a className="link-white link-unformatted" href={`#${link.anchor}`}>{link.anchor}</a> */}
-                  <Link className="link-white link-unformatted" to={`${link.anchor}`}>{link.anchor}</Link>
+                  <a className="link-white link-unformatted" href={`#${link.anchor}`}>{link.anchor}</a>
                 </span>);
               })}
 

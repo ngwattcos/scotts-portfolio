@@ -55,9 +55,9 @@ export default class NavBar extends React.Component<NavBarProps, NavBarState> {
       <div className="cust-navbar" style={cssProps}>
         <div className="cust-navbar-content">
           {links.map(link => <div className="cust-navbar-item">
-            <Link className="link-unformatted link-black" to={`${link.anchor}`}>
+            <a className="link-unformatted link-black" href={`#${link.anchor}`}>
               <div>#{link.anchor}</div>
-            </Link>
+            </a>
           </div>
             )}
         </div>

@@ -37,6 +37,13 @@ $gradient1: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(219,219,219,1) 63
 
 $navbar-item-fontsize: 24px;
 
+
+$index-background: 1;
+$index-background-cover: 2;
+$index-landing-cover: 3;
+$index-section: 4;
+$index-navbar: 5;
+
 * {
   font-family: $font-main
 }
@@ -47,7 +54,7 @@ $navbar-item-fontsize: 24px;
   overflow: hidden;
   text-align: left;
   position: fixed;
-  z-index: 100;
+  z-index: $index-navbar;
   transition: top 0.2s;
   transition-timing-function: linear;
   -webkit-transition-timing-function: ease-in-out;
@@ -97,7 +104,7 @@ body {
   // background-color: $light-cover;
   // width: 100%;
   height: 100vh;
-  z-index: 10;
+  z-index: $index-landing-cover;
   overflow: hidden;
 }
 
@@ -299,7 +306,9 @@ div.account-card > div.account-number {
 }
 
 .centered-custom {
-	margin: 0 auto;
+	// margin: 0 auto;
+  // width: auto;
+  display: inline-block;
 }
 
 .text-centered {
@@ -326,7 +335,23 @@ $section-padding: 30px;
 	background-repeat: no-repeat;
 	background-size: cover;
   margin-top: 0px;
+  z-index: $index-section;
 }
+
+.child-parallax {
+  position: fixed;
+  // left: 50px;
+  // top: 30%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: yellow;
+  border-radius: 2rem;
+  // height: 100%;
+  z-index: $index-background-cover;
+  // background-attachment: fixed;
+  // background-position: center;
+}
+
 
 .section-parallax {
   // background-image: url("../images/background0.png");
@@ -338,6 +363,7 @@ $section-padding: 30px;
 	background-repeat: no-repeat;
 	background-size: cover;
   margin-top: 0px;
+  z-index: $index-background;
 }
 
 .section-content {
@@ -403,10 +429,9 @@ $section-padding: 30px;
 
 .landing-group {
 	height: 100vh;
-	width: 100%;
-	padding-top: 55vh;
-	padding-bottom: 30vh;
-	/* z-index: 100; */
+  // width: 100%;
+  width: auto;
+	// padding-bottom: 30vh;
 }
 
 .landing-hugetitle {
@@ -421,13 +446,15 @@ $section-padding: 30px;
 	font-size: 60px;
 	font-weight: bold;
 	color: #FFFFFF;
+  width: auto;
 }
 
 .landing-normal {
   font-size: 36px;
   font-family: $font-main;
 	font-weight: 1;
-	color: #FFFFFF;
+  color: #FFFFFF;
+  width: auto;
 }
 
 

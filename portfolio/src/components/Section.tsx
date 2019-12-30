@@ -1,10 +1,10 @@
-import React, {ReactNode, Component } from 'react';
+import React from 'react';
 import * as CSS from 'csstype';
 
 type Props = {
   title: string,
   id: string,
-  children: ReactNode,
+  children: React.ReactNode,
   backgroundImage?: string,
   backgroundColor?: string,
   backgroundGradient?: number,
@@ -15,7 +15,7 @@ type Props = {
   paddingBottom?: string,
 }
 
-export default class Section extends Component<Props> {
+export default class Section extends React.Component<Props> {
   render() {
     const outerProps: CSS.Properties = {
       backgroundColor: `${this.props.backgroundImage}`,
