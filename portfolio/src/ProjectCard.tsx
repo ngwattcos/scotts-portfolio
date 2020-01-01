@@ -1,14 +1,15 @@
 import React from 'react';
+import Card from './components/Card';
 
-type CardProps = {
+type Props = {
   title: string,
   children?: React.ReactNode,
 }
 
-export default class Card extends React.Component<CardProps> {
+export default class ProjectCard extends React.Component<Props> {
   render() {
     return (
-      <div className="card">
+      <div className="project-card">
         <div className="card-heading">{this.props.title}</div>
         {/* <hr /> */}
         <div>{this.props.children}</div>

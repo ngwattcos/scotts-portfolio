@@ -1,5 +1,4 @@
 import React from 'react';
-import * as CSS from 'csstype';
 
 type CardContainerProps = {
   children?: React.ReactNode,

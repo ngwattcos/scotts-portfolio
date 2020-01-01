@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll'
 import * as CSS from 'csstype';
 
 type Anchor = {
@@ -8,8 +7,8 @@ type Anchor = {
 
 
 export const links: Anchor[] = [
-  { anchor: "about"},
-  { anchor: "skills"},
+  { anchor: "about/blog"},
+  { anchor: "skills & interests"},
   { anchor: "experience"},
   { anchor: "projects"},
   { anchor: "experiments"},

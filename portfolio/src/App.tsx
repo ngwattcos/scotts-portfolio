@@ -1,4 +1,5 @@
 import React from 'react';
+// import Typist from 'react-typist';
 // import './App.css';
 import './styles/App.scss';
 import NavBar from './components/NavBar';
@@ -8,6 +9,7 @@ import Section from './components/Section';
 import CardContainer from './components/CardContainer';
 import Card from './components/Card';
 import ParallaxElement from './components/ParallaxElement';
+import ProjectCard from './ProjectCard';
 
 const App: React.FC = () => {
   return (
@@ -21,10 +23,7 @@ const App: React.FC = () => {
       </ParallaxSection>
 
       <Section title="whoami" id="about" minHeight="60vh" padding="50px">
-        <CardContainer>
-          <Card title="About">potato</Card>
-          <Card title="About">potato</Card>
-        </CardContainer>
+        <span className="blinking-cursor">|</span>
       </Section>
 
       <Section title="skills" id="skills" minHeight="60vh">
@@ -36,6 +35,11 @@ const App: React.FC = () => {
       </Section>
 
       <Section title="projects" id="projects" backgroundGradient={1} minHeight="30vh" padding="0px">
+        <CardContainer>
+          <ProjectCard title="Corporeal">Corporeal</ProjectCard>
+          <Card title="Thing 2">potato</Card>
+          <Card title="Object 3">potato</Card>
+        </CardContainer>
 
       </Section>
 

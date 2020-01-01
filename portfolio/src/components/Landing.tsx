@@ -1,8 +1,6 @@
 import React from 'react'
 import {links} from './NavBar'
 import * as CSS from 'csstype';
-
-import { Link, animateScroll as scroll } from 'react-scroll'
 // import * as CSS from 'csstype';
 
 type LandingProps = {
@@ -22,7 +20,7 @@ export default class Landing extends React.Component<LandingProps> {
         <div className="landing-group" style={cssProps}>
           <div className="centered-custom">
             <div className="landing-hugetitle">Scott Wang</div>
-            <div className="landing-normal">Incoming Google SWE Intern '20</div>
+            <div className="landing-normal highlighted-black">Incoming Google SWE Intern '20</div>
             <br />
             <div className="landing-small">
               {links.map(link => {
