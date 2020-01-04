@@ -1,5 +1,5 @@
 import React from 'react';
-// import Typist from 'react-typist';
+import Typist from 'react-typist';
 // import './App.css';
 import './styles/App.scss';
 import NavBar from './components/NavBar';
