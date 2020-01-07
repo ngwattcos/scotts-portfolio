@@ -23,11 +23,19 @@ const App: React.FC = () => {
       </ParallaxSection>
 
       <Section title="whoami" id="about" minHeight="60vh" padding="50px">
-        <span className="blinking-cursor">|</span>
+        {/* <span className="blinking-cursor">|</span> */}
+        <span>I am a...</span>
+        <Typist>Potato</Typist>
+        <Typist>Potato</Typist>
+        <Typist>Potato</Typist>
+        <Typist>Potato</Typist>
+        <Typist>Potato</Typist>
+        <Typist>Potato</Typist>
+        interests
       </Section>
 
       <Section title="skills" id="skills" minHeight="60vh">
-
+        
       </Section>
 
       <Section title="experience" id="experience" backgroundGradient={1} minHeight="30vh" padding="0px">

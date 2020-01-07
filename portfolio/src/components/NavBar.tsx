@@ -8,7 +8,7 @@ type Anchor = {
 
 export const links: Anchor[] = [
   { anchor: "about/blog"},
-  { anchor: "skills & interests"},
+  { anchor: "skills"},
   { anchor: "experience"},
   { anchor: "projects"},
   { anchor: "experiments"},
