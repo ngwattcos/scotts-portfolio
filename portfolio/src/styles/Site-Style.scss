@@ -49,7 +49,8 @@ $index-section: 4;
 $index-navbar: 5;
 
 * {
-  font-family: $font-main
+	font-family: $font-main;
+	font-weight: 100;
 }
 
 .cust-navbar {
@@ -79,7 +80,7 @@ $cust-navbar-item-padding-side: 10px;
   display: inline-block;
   color: $primary-dark;
   font-family: $font-main;
-  font-weight: 5;
+  font-weight: 100;
   font-size: $navbar-item-fontsize;
   padding-left: $cust-navbar-item-padding-side;
   padding-right: $cust-navbar-item-padding-side;
@@ -182,12 +183,16 @@ div.sidenav {
 	/* border: 0.5px solid rgba(0, 0, 0, 0.2); */
 }
 
+.grid-container {
+	display: grid;
+}
+
 .card-container {
   align-items: center;
   text-align: center;
 }
 
-$card-padding: 15px;
+$card-padding: 20px;
 $card-padding-bottom: 5px;
 $card-margin: 20px;
 $card-font-size: 1rem;
@@ -197,7 +202,7 @@ $project-card-background: #666666;
 .card {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
   background-color: $card-background;
-  font-family: Roboto;
+  font-family: $roboto;
   display: inline-block;
   // padding: $card-padding;
   margin-left: $card-margin;
@@ -205,14 +210,16 @@ $project-card-background: #666666;
   min-height: 30vh;
   min-width: 20%;
   text-align: left;
-  z-index: 10;
+	z-index: 10;
+	border-radius: 15px;
+	overflow: hidden;
 }
 
 
 .project-card {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
   background-color: $project-card-background;
-  font-family: Roboto;
+  font-family: $roboto;
   display: inline-block;
   // padding: $card-padding;
   margin-left: $card-margin;
@@ -223,7 +230,26 @@ $project-card-background: #666666;
   z-index: 10;
 }
 
-.card-heading {
+.card-heading-1 {
+  // width: 100%;
+  font-weight: bold;
+  // color: $secondary-light;
+  // color: $blue;
+	font-size: 1rem;
+	text-align: center;
+	// border-bottom: 1px solid #dddddd;
+	font-weight: 100;
+  // letter-spacing: 3px;
+  padding-top: 15px;
+  padding-left: $card-padding;
+  padding-right: $card-padding;
+	padding-bottom: $card-padding-bottom;
+  // margin-bottom: 0px solid black;
+  z-index: 12;
+}
+
+
+.card-heading-2 {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   // width: 100%;
   background: $white;
@@ -350,14 +376,17 @@ $section-padding: 30px;
 
 .section {
   // background-image: url("../images/background0.png");
-  // background-color: red;
+	// background-color: red;
+	// position: absolute;
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
   margin-top: 0px;
-  z-index: $index-section;
+	z-index: $index-section;
+	// z-index: 100;
+	transform: rotate(0.0turn);
 }
 
 .child-parallax {
@@ -389,7 +418,7 @@ $section-padding: 30px;
 }
 
 .section-content {
-  font-weight: 1;
+  font-weight: 100;
   font-size: 3rem;
   color: $secondary-dark;
   padding: $section-padding;
@@ -401,7 +430,7 @@ $section-padding: 30px;
 }
 
 .section-title {
-  font-weight: 1;
+  font-weight: 100;
   font-size: 3rem;
   color: $secondary-dark;
   font-family: $roboto;
@@ -467,7 +496,7 @@ $section-padding: 30px;
 .landing-hugetitle {
   font-family: $font-main;
 	font-size: 90px;
-	font-weight: 1;
+	font-weight: 100;
 	color: #FFFFFF;
   letter-spacing: 10px;
   margin-bottom: 1rem;
@@ -485,7 +514,7 @@ $section-padding: 30px;
 .landing-normal {
   font-size: 36px;
   font-family: $font-main;
-	font-weight: 1;
+	font-weight: 100;
   color: #FFFFFF;
   width: auto;
 }
@@ -498,11 +527,15 @@ $section-padding: 30px;
 }
 
 .group-shadow {
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-window {
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .shadow-rect {
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .shadow-rect-small {

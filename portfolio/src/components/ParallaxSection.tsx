@@ -8,12 +8,14 @@ type imageUrl = {
 type Props = {
   children: ReactNode,
   backgroundImage: string,
+  minHeight?: string,
 }
 
 export default class ParallaxSection extends Component<Props> {
   render() {
     const cssProps: CSS.Properties = {
-      backgroundImage: `url('${this.props.backgroundImage}')`
+      backgroundImage: `url('${this.props.backgroundImage}')`,
+      minHeight: this.props.minHeight || "0vh",
       // backgroundColor: "blue"
     };
 

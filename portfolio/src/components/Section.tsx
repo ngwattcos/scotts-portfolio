@@ -29,16 +29,19 @@ export default class Section extends React.Component<Props> {
     let gradientChoice = "";
     switch (this.props.backgroundGradient) {
       case 1:
-        gradientChoice = "gradient1";
+        gradientChoice = " gradient1";
+        break;
+      case 2:
+        gradientChoice = " gradient2";
         break;
       default:
-        gradientChoice = "gradient1";
+        gradientChoice = "";
         break;
     }
     
 
     return (
-      <div className={`section ${gradientChoice}`} style={outerProps} id={this.props.id}>
+      <div className={`section shadow-rect ${gradientChoice}`} style={outerProps} id={this.props.id}>
         <div className="section-title">{this.props.title}</div>
         <div style={innerProps}>{this.props.children}</div>
       </div>

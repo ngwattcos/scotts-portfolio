@@ -9,30 +9,28 @@ import Section from './components/Section';
 import CardContainer from './components/CardContainer';
 import Card from './components/Card';
 import ParallaxElement from './components/ParallaxElement';
-import ProjectCard from './ProjectCard';
+import ProjectCard from './components/ProjectCard';
+import AboutPage from './components/AboutPage'
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar></NavBar>
       <ParallaxSection backgroundImage="./images/background0.png">
-        <ParallaxElement width="auto" left="55%" top="25%">
-          <a className="link-unformatted" href="">What is this?</a>
-        </ParallaxElement>
+        {/* <ParallaxElement width="auto" left="55%" top="25%"> */}
+          {/* <a className="link-unformatted" href="">What is this?</a> */}
+        {/* </ParallaxElement> */}
         <Landing paddingTop="60vh" paddingBottom="30vh"></Landing>
       </ParallaxSection>
 
       <Section title="whoami" id="about" minHeight="60vh" padding="50px">
         {/* <span className="blinking-cursor">|</span> */}
-        <span>I am a...</span>
-        <Typist>Potato</Typist>
-        <Typist>Potato</Typist>
-        <Typist>Potato</Typist>
-        <Typist>Potato</Typist>
-        <Typist>Potato</Typist>
-        <Typist>Potato</Typist>
-        interests
+        <AboutPage></AboutPage>
       </Section>
+
+      <ParallaxSection backgroundImage="./images/background1.png" minHeight="70vh">
+
+      </ParallaxSection>
 
       <Section title="skills" id="skills" minHeight="60vh">
         
@@ -45,8 +43,8 @@ const App: React.FC = () => {
       <Section title="projects" id="projects" backgroundGradient={1} minHeight="30vh" padding="0px">
         <CardContainer>
           <ProjectCard title="Corporeal">Corporeal</ProjectCard>
-          <Card title="Thing 2">potato</Card>
-          <Card title="Object 3">potato</Card>
+          <ProjectCard title="Thing 2">potato</ProjectCard>
+          <ProjectCard title="Object 3">potato</ProjectCard>
         </CardContainer>
 
       </Section>
