@@ -18,7 +18,7 @@ type Props = {
 export default class Section extends React.Component<Props> {
   render() {
     const outerProps: CSS.Properties = {
-      backgroundColor: `${this.props.backgroundImage}`,
+      backgroundColor: `${this.props.backgroundColor}`,
       minHeight: `${this.props.minHeight}`,
     };
 
@@ -41,7 +41,7 @@ export default class Section extends React.Component<Props> {
     
 
     return (
-      <div className={`section shadow-rect ${gradientChoice}`} style={outerProps} id={this.props.id}>
+      <div className={`section shadow-rect${gradientChoice}`} style={outerProps} id={this.props.id}>
         <div className="section-title">{this.props.title}</div>
         <div style={innerProps}>{this.props.children}</div>
       </div>
