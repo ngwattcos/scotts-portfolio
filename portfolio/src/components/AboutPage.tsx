@@ -1,6 +1,7 @@
 import React from 'react';
 import Typist from 'react-typist';
-import * as CSS from 'csstype';
+import { Properties} from 'csstype';
+import AboutCell from './AboutCell';
 
 import Card from './Card';
 
@@ -8,16 +9,27 @@ type Props = {
   children?: React.ReactNode,
 }
 
+
 export default class AboutPage extends React.Component<Props> {
   render() {
     return (
       <div>
+        <div className="grid-container">
+          <AboutCell heading="CS Student" image=""></AboutCell>
+          <AboutCell heading="Engineer" image=""></AboutCell>
+          <AboutCell heading="Potato" image=""></AboutCell>
+        </div>
         <div>
           <Card title="whoami" padding="20px" width="4in" height="2in">
             {/* <span>I am a...</span> */}
-            <Typist>...incoming Google SWE intern</Typist>
-            <Typist>...CS student @ Cornell</Typist>
-            <Typist>...student inventor</Typist>
+            <Typist cursor={{
+              blink: true,
+            }}>
+              <div>...CS student @ Cornell</div>
+              <div>...incoming Google SWE intern</div>
+              <div>...student inventor</div>
+            </Typist>
+            
           </Card>
         </div>
         <div>
@@ -27,9 +39,6 @@ export default class AboutPage extends React.Component<Props> {
             <Typist>...playing the cello</Typist>
             <Typist>...developing video games</Typist>
             <Typist>...gaming</Typist>
-            <Typist>Potato</Typist>
-            <Typist>Potato</Typist>
-            <Typist>Potato</Typist>
             interests
           </Card>
         </div>

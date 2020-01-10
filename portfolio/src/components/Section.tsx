@@ -2,7 +2,7 @@ import React from 'react';
 import * as CSS from 'csstype';
 
 type Props = {
-  title: string,
+  title?: string,
   id: string,
   children: React.ReactNode,
   backgroundImage?: string,
@@ -42,7 +42,8 @@ export default class Section extends React.Component<Props> {
 
     return (
       <div className={`section shadow-rect${gradientChoice}`} style={outerProps} id={this.props.id}>
-        <div className="section-title">{this.props.title}</div>
+        {this.props.title ? <div className="section-title">{this.props.title}</div> : null}
+        
         <div style={innerProps}>{this.props.children}</div>
       </div>
     );

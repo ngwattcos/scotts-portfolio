@@ -1,5 +1,5 @@
 import React from 'react';
-import Typist from 'react-typist';
+// import Typist from 'react-typist';
 // import './App.css';
 import './styles/App.scss';
 import NavBar from './components/NavBar';
@@ -7,10 +7,11 @@ import Landing from './components/Landing';
 import ParallaxSection from './components/ParallaxSection';
 import Section from './components/Section';
 import CardContainer from './components/CardContainer';
-import Card from './components/Card';
-import ParallaxElement from './components/ParallaxElement';
+// import Card from './components/Card';
+// import ParallaxElement from './components/ParallaxElement';
 import ProjectCard from './components/ProjectCard';
 import AboutPage from './components/AboutPage'
+import SkillsPage from './components/SkillsPage';
 
 const App: React.FC = () => {
   return (
@@ -28,19 +29,19 @@ const App: React.FC = () => {
         <AboutPage></AboutPage>
       </Section>
 
-      <ParallaxSection backgroundImage="./images/background1.png" minHeight="70vh">
+      <ParallaxSection backgroundImage="./images/background5.png" minHeight="70vh">
 
       </ParallaxSection>
 
-      <Section title="skills" id="skills" minHeight="60vh">
-        
+      <Section title="" id="skills" minHeight="60vh">
+        <SkillsPage></SkillsPage>
       </Section>
 
-      <Section title="experience" id="experience" backgroundGradient={1} minHeight="30vh" padding="0px">
+      <Section title="experience" id="experience" minHeight="30vh" padding="0px">
 
       </Section>
 
-      <Section title="projects" id="projects" backgroundGradient={1} minHeight="30vh" padding="0px">
+      <Section title="projects" id="projects" minHeight="30vh" padding="0px">
         <CardContainer>
           <ProjectCard title="Corporeal">Corporeal</ProjectCard>
           <ProjectCard title="Thing 2">potato</ProjectCard>
@@ -49,7 +50,7 @@ const App: React.FC = () => {
 
       </Section>
 
-      <Section title="experiments" id="experiments" backgroundGradient={1} minHeight="30vh" padding="0px">
+      <Section title="experiments" id="experiments" minHeight="30vh" padding="0px">
 
       </Section>
 
