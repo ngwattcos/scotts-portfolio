@@ -9,6 +9,7 @@ type Props = {
   children: ReactNode,
   backgroundImage: string,
   minHeight?: string,
+  contain?: boolean,
 }
 
 export default class ParallaxSection extends Component<Props> {
@@ -16,6 +17,7 @@ export default class ParallaxSection extends Component<Props> {
     const cssProps: CSS.Properties = {
       backgroundImage: `url('${this.props.backgroundImage}')`,
       minHeight: this.props.minHeight || "0vh",
+      backgroundSize: this.props.contain ? "contain" : "cover",
       // backgroundColor: "blue"
     };
 

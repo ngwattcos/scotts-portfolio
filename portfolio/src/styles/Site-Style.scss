@@ -412,7 +412,7 @@ $section-padding: 30px;
 	background-repeat: no-repeat;
 	width: 100%;
 	background-repeat: no-repeat;
-	background-size: cover;
+	// background-size: cover;
   margin-top: 0px;
   z-index: $index-background;
 }
@@ -553,22 +553,25 @@ $section-padding: 30px;
 	border-radius: 100%;
 }
 
-$breakpoint-medium: 6in;
-$breakpoint-big: 10in;
+$breakpoint-small: 800px;
+$breakpoint-medium: 1100px;
+$breakpoint-big: 1500px;
+// $breakpoint-medium: 6in;
+// $breakpoint-big: 10in;
 
 // @media 
 .grid-container {
 	display: grid;
 	/* margin-top: 40px; */
-	@media (max-width: $breakpoint-medium){
+	@media (max-width: $breakpoint-small){
 		grid-template-columns: repeat(1, 1fr);
 	}
 
-	@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-big) {
+	@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	@media (min-width: $breakpoint-big) {
+	@media (min-width: $breakpoint-medium) {
 		grid-template-columns: repeat(3, 1fr);
 	}
 	
@@ -579,11 +582,23 @@ $breakpoint-big: 10in;
 }
 
 .grid-cell-about-heading {
-	font-size: 1.6rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.grid-cell-about-body {
+  font-size: 1.1rem;
+  // min-width: 1in;
+  // width: 2in;
+  width: 60%;
+  margin: 0 auto;
+  font-weight: 300;
 }
 
 .grid-cell-about {
-	// background-color: #dddddd;
+  // background-color: #dddddd;
+  display: block;
 	height: 3in;
 	padding: 40px;
 	text-align: center;
@@ -606,14 +621,6 @@ $breakpoint-big: 10in;
 	/* background: #00a500; */
 }
 
-.grid-account-cell {
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 15px;
-	/* background: #eeeeff; */
-	min-width: 300px;
-	justify-content: center;
-}
 
 .account-cell-section {
 	/* background: #ffeeee; */

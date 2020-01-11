@@ -29,7 +29,7 @@ const App: React.FC = () => {
         <AboutPage></AboutPage>
       </Section>
 
-      <ParallaxSection backgroundImage="./images/background5.png" minHeight="70vh">
+      <ParallaxSection backgroundImage="./images/background3.png" minHeight="70vh" contain={true}>
 
       </ParallaxSection>
 

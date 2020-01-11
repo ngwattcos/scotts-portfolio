@@ -23,6 +23,7 @@ export default class AboutCell extends React.Component<Props> {
       <div className="grid-cell-about">
         <div style={imageProps}></div>
         <div className="grid-cell-about-heading">{this.props.heading}</div>
+        <div className="grid-cell-about-body">{this.props.children}</div>
       </div>
     )
   }

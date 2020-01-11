@@ -16,8 +16,12 @@ export default class AboutPage extends React.Component<Props> {
       <div>
         <div className="grid-container">
           <AboutCell heading="CS Student" image=""></AboutCell>
-          <AboutCell heading="Engineer" image=""></AboutCell>
-          <AboutCell heading="Potato" image=""></AboutCell>
+          <AboutCell heading="Engineer" image="">
+            I invented something once. Read about it here!
+          </AboutCell>
+          <AboutCell heading="Potato" image="">
+            A potato's shape is amorphous, non-well-defined. So are my boundaries.
+          </AboutCell>
         </div>
         <div>
           <Card title="whoami" padding="20px" width="4in" height="2in">
