@@ -1,7 +1,7 @@
 import React from 'react';
 import { Properties} from 'csstype';
 import EnterView from './sensors/EnterView';
-import { timingSafeEqual } from 'crypto';
+import Fade from './transitions/Fade';
 
 type Props = {
   heading?: string,
@@ -46,23 +46,11 @@ export default class AboutCell extends React.Component<Props, State> {
     const { visible } = this.state;
 
     return (
-      <EnterView onChange={(visibility) => {
-        if (this.props.delay) {
-          setTimeout(() => {
-            this.setState({visible: visibility});
-          }, this.props.delay);
-        } else {
-          this.setState({visible: visibility});
-        }
-        
-
-      }}>
-        <div className={`grid-cell-about ${visible ? "visible" : "invisible"}`}>
-          <div style={imageProps}></div>
+      <Fade enterDelay={this.props.delay}>
+        <div style={imageProps}></div>
           <div className="grid-cell-about-heading">{this.props.heading}</div>
           <div className="grid-cell-about-body">{this.props.children}</div>
-        </div>
-      </EnterView>
+      </Fade>
       
     )
   }
