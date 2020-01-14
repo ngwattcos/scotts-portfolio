@@ -183,7 +183,7 @@ div.sidenav {
 	/* border: 0.5px solid rgba(0, 0, 0, 0.2); */
 }
 
-.grid-container {
+.about-grid-container {
 	display: grid;
 }
 
@@ -217,7 +217,8 @@ $project-card-background: #666666;
 
 
 .project-card {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  background-size: cover;
   background-color: $project-card-background;
   font-family: $roboto;
   display: inline-block;
@@ -228,6 +229,10 @@ $project-card-background: #666666;
   min-width: 20%;
   text-align: left;
   z-index: 10;
+}
+
+.project-card:hover {
+  background-size: contain;
 }
 
 .card-heading-1 {
@@ -608,6 +613,23 @@ $breakpoint-big: 1500px;
 	/* padding-left: 80px; */
 	/* padding: 20px; */
 	/* background: #00a500; */
+}
+
+.invisible {
+  -webkit-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  opacity: 0.1;
+}
+
+.visible {
+  -webkit-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  opacity: 1.0;
+
 }
 
 .grid-cell-padded-small {

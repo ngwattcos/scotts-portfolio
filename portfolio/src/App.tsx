@@ -24,7 +24,7 @@ const App: React.FC = () => {
         <Landing paddingTop="60vh" paddingBottom="30vh"></Landing>
       </ParallaxSection>
 
-      <Section title="whoami" id="about" minHeight="60vh" padding="50px">
+      <Section title="whoami" id="about" minHeight="60vh" padding="50px" noShadow={true}>
         {/* <span className="blinking-cursor">|</span> */}
         <AboutPage></AboutPage>
       </Section>

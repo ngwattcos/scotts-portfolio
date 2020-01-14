@@ -13,6 +13,7 @@ type Props = {
   paddingSide?: string,
   paddingTop?: string,
   paddingBottom?: string,
+  noShadow?: boolean,
 }
 
 export default class Section extends React.Component<Props> {
@@ -38,10 +39,12 @@ export default class Section extends React.Component<Props> {
         gradientChoice = "";
         break;
     }
+
+    const shadowChoice = this.props.noShadow != null && this.props.noShadow == true ? "" : ` shadow-rect${gradientChoice}`;
     
 
     return (
-      <div className={`section shadow-rect${gradientChoice}`} style={outerProps} id={this.props.id}>
+      <div className={`section${shadowChoice}`} style={outerProps} id={this.props.id}>
         {this.props.title ? <div className="section-title">{this.props.title}</div> : null}
         
         <div style={innerProps}>{this.props.children}</div>
