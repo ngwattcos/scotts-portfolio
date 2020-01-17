@@ -10,20 +10,36 @@ type Props = {
   children?: React.ReactNode,
 }
 
+type AboutProp = {
+  heading: string,
+  body: React.ReactNode,
+}
+
+const aboutInfo: AboutProp[] = [
+  {
+    heading: "CS Student",
+    body: null,
+  },
+  {
+    heading: "CS Student",
+    body: <div>I invented something once. Read about it here!</div>,
+  },
+  {
+    heading: "CS Student",
+    body: <div>A potato's shape is amorphous, non-well-defined. So are my boundaries.</div>,
+  },
+]
+
 
 export default class AboutPage extends React.Component<Props> {
   render() {
     return (
       <div>
         <div className="grid-container">
-          <AboutCell heading="CS Student" image="" delay={100}></AboutCell>
-          
-          <AboutCell heading="Engineer" image="" delay={200}>
-            I invented something once. Read about it here!
-          </AboutCell>
-          <AboutCell heading="Potato" image="" delay={300}>
-            A potato's shape is amorphous, non-well-defined. So are my boundaries.
-          </AboutCell>
+
+          {
+            aboutInfo.map((info, i) => <AboutCell heading={info.heading} delay={i * 100}>{info.body}</AboutCell>)
+          }
           
         </div>
         <div>

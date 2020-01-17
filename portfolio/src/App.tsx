@@ -17,6 +17,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar></NavBar>
+      {/* https://raw.githubusercontent.com/ngwattcos/Corporeal/master/screenshots/main_menu.png */}
       <ParallaxSection backgroundImage="./images/background0.png">
         {/* <ParallaxElement width="auto" left="55%" top="25%"> */}
           {/* <a className="link-unformatted" href="">What is this?</a> */}

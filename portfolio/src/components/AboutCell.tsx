@@ -48,8 +48,8 @@ export default class AboutCell extends React.Component<Props, State> {
     return (
       <Fade enterDelay={this.props.delay}>
         <div style={imageProps}></div>
-          <div className="grid-cell-about-heading">{this.props.heading}</div>
-          <div className="grid-cell-about-body">{this.props.children}</div>
+        <div className="grid-cell-about-heading">{this.props.heading}</div>
+        <div className="grid-cell-about-body">{this.props.children}</div>
       </Fade>
       
     )
