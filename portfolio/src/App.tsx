@@ -12,25 +12,26 @@ import CardContainer from './components/CardContainer';
 import ProjectCard from './components/ProjectCard';
 import AboutPage from './components/AboutPage'
 import SkillsPage from './components/SkillsPage';
+import ProjectPage from './components/transitions/ProjectPage';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <NavBar></NavBar>
       {/* https://raw.githubusercontent.com/ngwattcos/Corporeal/master/screenshots/main_menu.png */}
-      <ParallaxSection backgroundImage="./images/background0.png">
+      <ParallaxSection backgroundImage="https://raw.githubusercontent.com/ngwattcos/portfolio-images/master/images/background0.png">
         {/* <ParallaxElement width="auto" left="55%" top="25%"> */}
           {/* <a className="link-unformatted" href="">What is this?</a> */}
         {/* </ParallaxElement> */}
         <Landing paddingTop="60vh" paddingBottom="30vh"></Landing>
       </ParallaxSection>
 
-      <Section title="whoami" id="about" minHeight="60vh" padding="50px" noShadow={true}>
+      <Section title="whoami" id="about" minHeight="60vh" padding="50px">
         {/* <span className="blinking-cursor">|</span> */}
         <AboutPage></AboutPage>
       </Section>
 
-      <ParallaxSection backgroundImage="./images/background3.png" minHeight="70vh" contain={true}>
+      <ParallaxSection backgroundImage="https://raw.githubusercontent.com/ngwattcos/portfolio-images/master/images/background3.png" minHeight="70vh" contain={true}>
 
       </ParallaxSection>
 
@@ -43,11 +44,7 @@ const App: React.FC = () => {
       </Section>
 
       <Section title="projects" id="projects" minHeight="30vh" padding="0px">
-        <CardContainer>
-          <ProjectCard title="Corporeal">Corporeal</ProjectCard>
-          <ProjectCard title="Thing 2">potato</ProjectCard>
-          <ProjectCard title="Object 3">potato</ProjectCard>
-        </CardContainer>
+        <ProjectPage></ProjectPage>
 
       </Section>
 

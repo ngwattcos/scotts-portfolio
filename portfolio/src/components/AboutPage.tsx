@@ -21,12 +21,12 @@ const aboutInfo: AboutProp[] = [
     body: null,
   },
   {
-    heading: "CS Student",
-    body: <div>I invented something once. Read about it here!</div>,
+    heading: "Engineer",
+    body: <div>I invented something once. Read about it <a className="link-unformatted" href="">here!</a></div>,
   },
   {
-    heading: "CS Student",
-    body: <div>A potato's shape is amorphous, non-well-defined. So are my boundaries.</div>,
+    heading: "Potato",
+    body: <div>A potato's shape is not well defined. Neither are my boundaries.</div>,
   },
 ]
 
@@ -35,10 +35,10 @@ export default class AboutPage extends React.Component<Props> {
   render() {
     return (
       <div>
-        <div className="grid-container">
+        <div className="grid-container-about">
 
           {
-            aboutInfo.map((info, i) => <AboutCell heading={info.heading} delay={i * 100}>{info.body}</AboutCell>)
+            aboutInfo.map((info, i) => <AboutCell heading={info.heading} delay={i * 150}>{info.body}</AboutCell>)
           }
           
         </div>

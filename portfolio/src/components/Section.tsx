@@ -40,7 +40,7 @@ export default class Section extends React.Component<Props> {
         break;
     }
 
-    const shadowChoice = this.props.noShadow != null && this.props.noShadow == true ? "" : ` shadow-rect${gradientChoice}`;
+    const shadowChoice = this.props.noShadow == true ? ` shadow-rect${gradientChoice}` : "";
     
 
     return (
