@@ -29,12 +29,6 @@ export default class EnterView extends React.Component<Props> {
       const bottom = this.selector.current?.getBoundingClientRect().bottom;
 
       const inView = top >= 0 && bottom <= window.innerHeight;
-      // if (!this.inView && inView) {
-      //   this.onEnterView();
-      // }
-      // if (this.inView && !inView) {
-      //   this.onExitView();
-      // }
 
       if (this.inView != inView) {
         this.props.onChange(inView);
