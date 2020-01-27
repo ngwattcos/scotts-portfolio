@@ -13,6 +13,7 @@ import ProjectCard from './components/ProjectCard';
 import AboutPage from './components/AboutPage'
 import SkillsPage from './components/SkillsPage';
 import ProjectPage from './components/transitions/ProjectPage';
+import profileData from './data/profileData.json';
 
 const App: React.FC = () => {
   return (
